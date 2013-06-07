@@ -9,7 +9,7 @@
   "main": "./lib/torque",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bytespider/servo.git"
+    "url": "https://github.com/bytespider/torque.git"
   },
   "keywords": [
     "servo",
