@@ -1,0 +1,32 @@
+{
+  "name": "torque",
+  "version": "0.1.0",
+  "author": "Rob Griffiths <rob@bytespider.eu>",
+  "description": "Control servos via a SSC or Torobot servo controller",
+  "scripts": {
+    "test": "nodeunit test/"
+  },
+  "main": "./lib/torque",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bytespider/servo.git"
+  },
+  "keywords": [
+    "servo",
+    "servocontroller",
+    "controller",
+    "usb",
+    "serial",
+    "ssc",
+    "torobot"
+  ],
+  "dependencies": {
+    "serialport": "~1.1.0"
+  },
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
