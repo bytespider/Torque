@@ -13,17 +13,19 @@ Install
 Example
 -------
 
-    var torque = require('torque');
-    var board = new torque.Board({
-        port: '/path/to/fd'
-    });
+```javascript
+var torque = require('torque');
+var board = new torque.Board({
+    port: '/path/to/fd'
+});
+
+board.on('ready', function () {
+    var servo = new torque.Servo({ pin: 0 });
+    servo.move(45, 500); // rotate to 45 degrees, and take 500ms to do so
     
-    board.on('ready', function () {
-        var servo = new torque.Servo({ pin: 0 });
-        servo.move(45, 500); // rotate to 45 degrees, and take 500ms to do so
-        
-        // wait 2 seconds then...
-        board.wait(2000, function () {
-            servo.move(130); // rotate to 130 degrees, take the default time of 50ms to do so
-        });
+    // wait 2 seconds then...
+    board.wait(2000, function () {
+        servo.move(130); // rotate to 130 degrees, take the default time of 50ms to do so
     });
+});
+```
