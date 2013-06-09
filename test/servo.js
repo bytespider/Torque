@@ -13,8 +13,6 @@ exports["instance"] = {
             pin: 10
         });
 
-        this.board.attach(servo);
-
         callback();
     },
     tearDown: function (callback) {
@@ -31,10 +29,49 @@ exports["instance"] = {
     "initialisation": function (test) {
         var servo = this.servo;
 
-        //test.expect(1);
-        //test.equals(90, servo.angle());
+        test.expect(1);
+        test.equals("#10P1500\r", this.board.serialport.lastWrite);
 
-        //board.serialport.emit('open');
+        test.done();
+    },
+    "move": function (test) {
+        var servo = this.servo;
+
+        test.expect(1);
+
+        servo.move(45, 1000); // move to 100 degrees over 1 second
+        test.equals("#10P1250T1000\r", this.board.serialport.lastWrite);
+
+        test.done();
+    },
+    "min": function (test) {
+        var servo = this.servo;
+
+        test.expect(1);
+
+        servo.min();
+        test.equals("#10P1000\r", this.board.serialport.lastWrite);
+
+        test.done();
+    },
+    "max": function (test) {
+        var servo = this.servo;
+
+        test.expect(1);
+
+        servo.max();
+        test.equals("#10P2000\r", this.board.serialport.lastWrite);
+
+        test.done();
+    },
+    "center": function (test) {
+        var servo = this.servo;
+
+        test.expect(1);
+
+        servo.center();
+        test.equals("#10P1500\r", this.board.serialport.lastWrite);
+
         test.done();
     }
 };
