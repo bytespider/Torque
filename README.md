@@ -29,3 +29,6 @@ board.on('ready', function () {
     });
 });
 ```
+
+`Torque.Board` provides `loop(ms, callback)` and `wait(ms, callback)`, however if you need to use more complicated event loop
+programming such as queues or repeat x times, please feel free to use [compulsive](https://npmjs.org/package/compulsive).
