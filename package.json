@@ -24,6 +24,7 @@
     "serialport": "~1.1.0"
   },
   "devDependencies": {
+    "nodeunit": "~0.8.0"
   },
   "license": "MIT",
   "engines": {
