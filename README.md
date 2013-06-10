@@ -1,6 +1,8 @@
 Torque
 ======
 
+[![Build Status](https://travis-ci.org/bytespider/Torque.png?branch=master)](https://travis-ci.org/bytespider/Torque)
+
 A library for controlling servos connected to a SSC or Torobot servo controller board. API modelled after [Johnny-Five](https://github.com/rwldrn/johnny-five)
 
 If you have one of these boards, please help out.
