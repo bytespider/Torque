@@ -30,7 +30,7 @@ exports["instance"] = {
         var servo = this.servo;
 
         test.expect(1);
-        test.equals("#10P1500\r", this.board.serialport.lastWrite);
+        test.equals("#10P1500T100\r\n", this.board.serialport.lastWrite);
 
         test.done();
     },
@@ -40,7 +40,7 @@ exports["instance"] = {
         test.expect(1);
 
         servo.move(45, 1000); // move to 100 degrees over 1 second
-        test.equals("#10P1250T1000\r", this.board.serialport.lastWrite);
+        test.equals("#10P1250T1000\r\n", this.board.serialport.lastWrite);
 
         test.done();
     },
@@ -50,7 +50,7 @@ exports["instance"] = {
         test.expect(1);
 
         servo.min();
-        test.equals("#10P1000\r", this.board.serialport.lastWrite);
+        test.equals("#10P1000T100\r\n", this.board.serialport.lastWrite);
 
         test.done();
     },
@@ -60,7 +60,7 @@ exports["instance"] = {
         test.expect(1);
 
         servo.max();
-        test.equals("#10P2000\r", this.board.serialport.lastWrite);
+        test.equals("#10P2000T100\r\n", this.board.serialport.lastWrite);
 
         test.done();
     },
@@ -70,7 +70,22 @@ exports["instance"] = {
         test.expect(1);
 
         servo.center();
-        test.equals("#10P1500\r", this.board.serialport.lastWrite);
+        test.equals("#10P1500T100\r\n", this.board.serialport.lastWrite);
+
+        test.done();
+    },
+    "calibrate": function (test) {
+        var servo = this.servo;
+
+        test.expect(2);
+
+        servo.calibrate([700, 2400]);
+
+        servo.min();
+        test.equals("#10P700T100\r\n", this.board.serialport.lastWrite);
+
+        servo.max();
+        test.equals("#10P2400T100\r\n", this.board.serialport.lastWrite);
 
         test.done();
     }
