@@ -1,6 +1,6 @@
 {
   "name": "torque",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Rob Griffiths <rob@bytespider.eu>",
   "description": "Control servos via a SSC or Torobot servo controller",
   "scripts": {
