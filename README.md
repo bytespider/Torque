@@ -43,18 +43,18 @@ Contributing
 
 If you have one of these boards, please help out.
 
-1. *Fork* the project, and run `npm install`
-2. *Create a branch* off develop for a feature; `$ git checkout -b myfeature develop` or off master for a bug fix `$ git checkout -b hotfix-issue1 master`
-3. *Add tests* where you can
-4. *Implement* your feature or bug fix
-5. *Run tests* by running `npm test` in the root folder
-6. *Commit* and push your changes. You could use a [pre-commit hook](https://gist.github.com/bytespider/5748723) to make the combine the last 2 steps.
-7. *Submit* your pull request
+1. **Fork** the project, and run `npm install`
+2. **Create a branch** off develop for a feature; `$ git checkout -b myfeature develop` or off master for a bug fix `$ git checkout -b hotfix-issue1 master`
+3. **Add tests** where you can
+4. **Implement** your feature or bug fix
+5. **un tests** by running `npm test` in the root folder
+6. **Commit** and push your changes. You could use a [pre-commit hook](https://gist.github.com/bytespider/5748723) to make the combine the last 2 steps.
+7. **Submit** your pull request
 
 
 Compatable boards
 -----------------
 
-* Torobot **confirmed**
+* Torobot *Confirmed*
 * SSC
 * Sonxun
